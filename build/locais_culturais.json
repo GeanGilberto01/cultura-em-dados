@@ -19464,6 +19464,50 @@
         "latitude": -4.98068,
         "longitude": -37.1621
       }
+    },
+    {
+      "local": "Teatro Municipal Usina Gravatá",
+      "tipo": "Teatro",
+      "avaliacao": 8.8,
+      "segmentosCulturais": [
+        "Teatro",
+        "Música"
+      ],
+      "descricao": "Principal teatro de Divinópolis, palco para apresentações teatrais, musicais e eventos culturais diversos.",
+      "eventos": [
+        {
+          "acao": "Peça Teatral Infantil",
+          "segmento": "Teatro",
+          "data": "20/08/2025",
+          "participantes": {
+            "Infantil": 120,
+            "Jovem": 45,
+            "Adulto": 80,
+            "Idoso": 30
+          }
+        },
+        {
+          "acao": "Concerto de Música Clássica",
+          "segmento": "Música",
+          "data": "02/09/2025",
+          "participantes": {
+            "Infantil": 20,
+            "Jovem": 85,
+            "Adulto": 200,
+            "Idoso": 70
+          }
+        }
+      ],
+      "endereco": {
+        "logradouro": "Vereda - Alameda Dr. Waldemar Rausch, s/nº",
+        "bairro": "Santa Clara",
+        "cidade": "Divinópolis",
+        "estado": "MG",
+        "populacao": 242328,
+        "regiao": "Sudeste",
+        "latitude": -20.1332,
+        "longitude": -44.8831
+      }
     }
   ]
 }
