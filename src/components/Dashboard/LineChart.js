@@ -13,8 +13,8 @@ const LineChart = ({ data, title, xAxisLabel, yAxisLabel }) => {
   const minValue = Math.min(...data.map(item => item.value));
   const range = maxValue - minValue || 1;
 
-  const width = 400;
-  const height = 200;
+  const width = 600;
+  const height = 350;
   const padding = 60;
 
   const points = data.map((item, index) => {

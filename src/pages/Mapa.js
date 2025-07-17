@@ -9,7 +9,7 @@ const Map = () => {
   const [availableSegments, setAvailableSegments] = useState([]);
 
   useEffect(() => {
-    fetch('./locais_culturais.json')
+    fetch(`${process.env.PUBLIC_URL}/locais_culturais.json`)
       .then((res) => res.json())
       .then((json) => {
         const locais = json.data;
