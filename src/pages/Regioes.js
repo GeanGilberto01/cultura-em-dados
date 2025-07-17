@@ -22,6 +22,7 @@ const Regioes = () => {
         const response = await fetch(`${process.env.PUBLIC_URL}/locais_culturais.json`)
         const json = await response.json();
         setRawData(json.data);
+        setFilteredData(json.data);
       } catch (error) {
         console.error('Erro ao carregar dados:', error);
       }
