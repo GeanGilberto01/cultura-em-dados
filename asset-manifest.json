@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/cultura-em-dados/static/css/main.c1570f6e.css",
-    "main.js": "/cultura-em-dados/static/js/main.b2211199.js",
+    "main.js": "/cultura-em-dados/static/js/main.ee6eb1f3.js",
     "static/js/453.670e15c7.chunk.js": "/cultura-em-dados/static/js/453.670e15c7.chunk.js",
     "index.html": "/cultura-em-dados/index.html",
     "main.c1570f6e.css.map": "/cultura-em-dados/static/css/main.c1570f6e.css.map",
-    "main.b2211199.js.map": "/cultura-em-dados/static/js/main.b2211199.js.map",
+    "main.ee6eb1f3.js.map": "/cultura-em-dados/static/js/main.ee6eb1f3.js.map",
     "453.670e15c7.chunk.js.map": "/cultura-em-dados/static/js/453.670e15c7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c1570f6e.css",
-    "static/js/main.b2211199.js"
+    "static/js/main.ee6eb1f3.js"
   ]
 }
