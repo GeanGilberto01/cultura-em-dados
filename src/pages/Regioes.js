@@ -13,16 +13,13 @@ const Regioes = () => {
   const [totalPages, setTotalPages] = useState(1);
   const [rawData, setRawData] = useState([]);
   const [regioesData, setRegioesData] = useState([]);
-  const [filteredData, setFilteredData] = useState([]);
-  const itemsPerPage = 15;
-
+  
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(`${process.env.PUBLIC_URL}/locais_culturais.json`)
         const json = await response.json();
         setRawData(json.data);
-        setFilteredData(json.data);
       } catch (error) {
         console.error('Erro ao carregar dados:', error);
       }
@@ -61,7 +58,7 @@ const Regioes = () => {
 
     const dadosFinais = Array.from(mapaRegioes.values());
     setRegioesData(dadosFinais);
-
+    
     if (regioesData.length > 0) {
       loadRegioes(regioesData);
     }
@@ -86,16 +83,11 @@ const Regioes = () => {
       }
 
       if (filterType) {
-        filteredData = filteredData.filter(regiao => regiao.tipo?.toLowerCase().includes(filterType.toLowerCase()));
+        filteredData = filteredData.filter(regiao => regiao.tipo === filterType);
       }
 
-      setFilteredData(filteredData);
-      
-      const startIndex = (currentPage - 1) * itemsPerPage;
-      const paginated = filteredData.slice(startIndex, startIndex + itemsPerPage);
-
-      setRegioes(paginated);
-      setTotalPages(Math.ceil(filteredData.length / itemsPerPage));
+      setRegioes(filteredData);
+      setTotalPages(Math.ceil(filteredData.length / 10));
       setError('');
     } catch (err) {
       setError('Erro ao carregar regiões');
@@ -211,7 +203,7 @@ const Regioes = () => {
                 </svg>
               </div>
               <div className="stat-info">
-                <span className="stat-value">{filteredData.length}</span>
+                <span className="stat-value">{regioes.length}</span>
                 <span className="stat-label"> Regiões Cadastradas</span>
               </div>
             </div>
@@ -223,7 +215,7 @@ const Regioes = () => {
                 </svg>
               </div>
               <div className="stat-info">
-                <span className="stat-value">{filteredData.reduce((sum, r) => sum + r.total_acoes, 0)}</span>
+                <span className="stat-value">{regioes.reduce((sum, r) => sum + r.total_acoes, 0)}</span>
                 <span className="stat-label"> Total de Ações</span>
               </div>
             </div>
@@ -235,7 +227,7 @@ const Regioes = () => {
                 </svg>
               </div>
               <div className="stat-info">
-                <span className="stat-value">{(filteredData.reduce((sum, r) => sum + r.populacao, 0) / 1000000).toFixed(1)}M</span>
+                <span className="stat-value">{(regioes.reduce((sum, r) => sum + r.populacao, 0) / 1000000).toFixed(1)}M</span>
                 <span className="stat-label"> População Total</span>
               </div>
             </div>
@@ -323,27 +315,29 @@ const Regioes = () => {
           </div>
 
           {/* Paginação */}
-          {totalPages > 1 && (
-            <div className="flex justify-center mt-4 gap-4">
+          {/* {totalPages > 1 && (
+            <div className="pagination">
               <button
                 onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
                 disabled={currentPage === 1}
-                className="px-4 py-2 bg-blue-500 text-white rounded disabled:opacity-50"
+                className="pagination-btn"
               >
                 Anterior
               </button>
-
-              <span>Página {currentPage} de {totalPages}</span>
-
+              
+              <span className="pagination-info">
+                Página {currentPage} de {totalPages}
+              </span>
+              
               <button
                 onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
                 disabled={currentPage === totalPages}
-                className="px-4 py-2 bg-blue-500 text-white rounded disabled:opacity-50"
+                className="pagination-btn"
               >
                 Próxima
               </button>
             </div>
-          )}
+          )} */}
         </div>
       </div>
     </div>
