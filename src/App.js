@@ -16,7 +16,7 @@ import './index.css';
 function App() {
   return (
     <AuthProvider>
-      <Router>
+      <Router basename="/cultura-em-dados">
         <div className="App min-h-screen flex flex-col">
           <Header />
           <main className="flex-grow">
