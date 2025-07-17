@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -16,7 +16,7 @@ import './index.css';
 function App() {
   return (
     <AuthProvider>
-      <Router basename="/cultura-em-dados">
+      <Router>
         <div className="App min-h-screen flex flex-col">
           <Header />
           <main className="flex-grow">
