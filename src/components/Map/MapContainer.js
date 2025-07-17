@@ -93,7 +93,7 @@ const CulturalMap = ({
   useEffect(() => {
     const loadData = async () => {
       try {
-        const res = await fetch('/locais_culturais.json');
+        const res = await fetch(`${process.env.PUBLIC_URL}/locais_culturais.json`);
         const json = await res.json();
 
         if (!Array.isArray(json.data)) {
