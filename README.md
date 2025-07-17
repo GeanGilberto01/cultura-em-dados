@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+# 🎭 Cultura em Dados
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Uma aplicação web interativa desenvolvida em **React + TailwindCSS** para visualização de dados culturais brasileiros. O projeto apresenta informações relevantes sobre locais, eventos e hábitos culturais de diferentes regiões do país com base em um arquivo `.json` de dados estático.
 
-## Available Scripts
+[🔗 Acesse a versão online do projeto](https://geangilberto01.github.io/cultura-em-dados/)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📊 Funcionalidades
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 🌍 Mapa interativo com marcadores culturais (usando Leaflet)
+- 📈 Gráficos dinâmicos com dados de participação por faixa etária e segmento (Chart.js)
+- 🧭 Filtros geográficos e por tipo de evento
+- 💃 Base de dados local em JSON (localizada na pasta `public/`)
+- 💡 Interface moderna e responsiva com TailwindCSS
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠️ Tecnologias Utilizadas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Categoria       | Tecnologias                                                |
+| --------------- | ---------------------------------------------------------- |
+| **Linguagem**   | JavaScript (ES6+)                                          |
+| **Framework**   | [React](https://reactjs.org/)                              |
+| **Estilização** | [Tailwind CSS](https://tailwindcss.com/)                   |
+| **Gráficos**    | [Chart.js](https://www.chartjs.org/) via `react-chartjs-2` |
+| **Mapas**       | [Leaflet](https://leafletjs.com/) via `react-leaflet`      |
+| **HTTP Client** | [Axios](https://axios-http.com/)                           |
+| **Deploy**      | GitHub Pages                                               |
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📁 Estrutura do Projeto
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+cultura-em-dados/
+├── public/
+│   └── locais_culturais.json       # Base de dados local
+├── src/
+│   ├── components/                 # Componentes reutilizáveis
+│   ├── pages/                      # Páginas principais da aplicação
+│   ├── assets/                     # Imagens, ícones, etc.
+│   ├── App.jsx                     # Componente principal
+│   └── index.js                    # Ponto de entrada do React
+├── tailwind.config.js
+├── package.json
+└── README.md
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## ▶️ Como Executar Localmente
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+> Pré-requisitos: Node.js (v18+) e npm
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+# Clone o repositório
+git clone https://github.com/GeanGilberto01/cultura-em-dados.git
+cd cultura-em-dados
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Instale as dependências
+npm install
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Inicie o servidor de desenvolvimento
+npm start
+```
 
-## Learn More
+A aplicação estará disponível em: `http://localhost:3000/`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🚀 Deploy
 
-### Code Splitting
+O deploy está configurado via GitHub Pages. Para publicar alterações:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm run build
+npm run deploy
+```
 
-### Analyzing the Bundle Size
+> O site será publicado em: `https://geangilberto01.github.io/cultura-em-dados/`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 📜 Licença
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Este projeto está licenciado sob a Licença MIT.\
+Consulte o arquivo [LICENSE](./LICENSE) para mais detalhes.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🙋‍♂️ Autor
 
-### Deployment
+Desenvolvido por **Gean Gilberto Coimbra**\
+🔗 [LinkedIn](https://www.linkedin.com/in/gean-gilberto-coimbra)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 💡 Sugestões Futuras (TODO)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-
+
+---
+
