@@ -15,7 +15,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/locais_culturais.json'); 
+        const response = await fetch('./locais_culturais.json'); 
         const json = await response.json();
         setRawData(json.data);
       } catch (error) {
