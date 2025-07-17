@@ -58,16 +58,11 @@ const Regioes = () => {
 
     const dadosFinais = Array.from(mapaRegioes.values());
     setRegioesData(dadosFinais);
-    
-    if (regioesData.length > 0) {
-      loadRegioes(regioesData);
-    }
+    loadRegioes(regioesData);
   }, [rawData]);
 
   useEffect(() => {
-    if (regioesData.length > 0) {
       loadRegioes(regioesData);
-    }
   }, [currentPage, searchTerm, filterType]);
 
   const loadRegioes = async (dados = regioesData) => {
